@@ -16,11 +16,12 @@ per i multipli di 5 stampi “Buzz” al posto del numero.
  //2.
  for (let i=1; i<=100; i++){
     j = y = i;
-    if (j % 3 === 0){
-        console.log('Fizz');
+    if (j % 3 === 0 && y % 5 === 0 ){
+        console.log('FizzBuzz');
     }else if (y % 5 === 0){
         console.log('Buzz');
-    
+    }else if (j % 3 === 0){
+            console.log('Fizz');
     }else{
         console.log(i);
     }
