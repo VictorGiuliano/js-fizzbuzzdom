@@ -11,18 +11,20 @@ per i multipli di 5 stampi “Buzz” al posto del numero.
 
 //1.
  const targetElement = document.getElementById('target');
- let j;
- let y;
+ const containerElement = document.createElement('div');
  //2.
+
+ let items = '';
  for (let i=1; i<=100; i++){
-    j = y = i;
-    if (j % 3 === 0 && y % 5 === 0 ){
-        console.log('FizzBuzz');
-    }else if (y % 5 === 0){
-        console.log('Buzz');
-    }else if (j % 3 === 0){
-            console.log('Fizz');
+    if (i % 15 === 0 ){
+        items += `<li>FizzBuzz<li>`;
+    }else if (i % 5 === 0){
+        items += `<li>Buzz<li>`;
+    }else if (i % 3 === 0){
+        items += `<li>Fizz<li>`;
     }else{
-        console.log(i);
+        items += `<li>${i}<li>`;   
     }
  }
+ targetElement.innerHTML = items;
+
